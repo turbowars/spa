@@ -52,12 +52,10 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
+/*Generic Styles*/
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px 'Raleway', sans-serif;
 }
 
 .wrapper {
@@ -65,28 +63,21 @@ body {
     margin: 0 5%;
 }
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
 .header-container {
-    border-bottom: 20px solid #e44d26;
-}
-
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
+    position: absolute;
+    width: 100%;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .title {
     color: white;
 }
+
 
 /* ==============
     MOBILE: Menu
@@ -102,13 +93,10 @@ nav a {
     display: block;
     margin-bottom: 10px;
     padding: 15px 0;
-
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-
     color: white;
-    background: #e44d26;
 }
 
 nav a:hover,
@@ -119,6 +107,7 @@ nav a:visited {
 nav a:hover {
     text-decoration: underline;
 }
+
 
 /* ==============
     MOBILE: Main
@@ -142,6 +131,7 @@ nav a:hover {
     padding: 20px 0;
 }
 
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -150,103 +140,144 @@ nav a:hover {
     padding-top: 20px;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
+.logo {
+    margin: 30px 0 0 80px;
+    width: 70px;
+}
 
+html,
+body,
+.main-container {
+    height: 100%;
+}
 
+.main-container {  
+    background: #000 url("../img/bg-1.jpg") no-repeat right top
+}
 
+ul.slide-nav {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+}
 
+ul.slide-nav li {
+    list-style: none;
+}
 
+.slide-nav a {
+    color: transparent;
+    width: 15px;
+    border-radius: 10px;
+    display: block;
+    height: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+}
 
+.slide-nav a.active {
+    background: #fff;
+}
 
+.mother-slide {
+    text-align: center;
+}
 
+.slide-title { 
+    color: #fff;
+    position: relative;
+    margin: 50px 0;
+}
 
+.slide-title .heading {
+    font-family: italianno;
+    font-size: 180px;
+    line-height: 1em;
+    margin: 0;
+}
 
+.slide-title .tagline {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    font-style: italic;
+    font-size: 22px;
+}
 
+.click-action {
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
 
+/*Homepage specfic styles*/
 
-
+.home-page .main.wrapper {
+    padding-top: 200px;
+}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
-
-/* ====================
+    /* ====================
     INTERMEDIATE: Menu
    ==================== */
-
     nav a {
         float: left;
-        width: 27%;
         margin: 0 1.7%;
-        padding: 25px 2%;
+        padding: 40px 2%;
         margin-bottom: 0;
+        font-weight: 400;
     }
-
     nav li:first-child a {
         margin-left: 0;
     }
-
     nav li:last-child a {
         margin-right: 0;
     }
-
-/* ========================
+    /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
-
     nav ul li {
         display: inline;
     }
-
     .oldie nav a {
         margin: 0 0.7%;
     }
 }
 
 @media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
+    /* ============
     WIDE: Menu
    ============ */
-
     .title {
         float: left;
     }
-
     nav {
         float: right;
-        width: 38%;
+        min-width: 520px;
     }
-
-/* ============
+    /* ============
     WIDE: Main
    ============ */
-
     .main article {
         float: left;
         width: 57%;
     }
-
     .main aside {
         float: right;
         width: 28%;
@@ -254,16 +285,16 @@ nav a:hover {
 }
 
 @media only screen and (min-width: 1140px) {
-
-/* ===============
+    /* ===============
     Maximal Width
    =============== */
-
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: auto;
+        /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
+
 
 /* ==========================================================================
    Helper classes
@@ -313,6 +344,7 @@ nav a:hover {
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -326,51 +358,41 @@ nav a:hover {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
