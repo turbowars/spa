@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italianno|Raleway:300,300i,400,600">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     <link rel="stylesheet" href="css/main.css">
     <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
@@ -16,9 +17,14 @@
 </head>
 
 <body class="home-page">
+    <div class="bg-slide">
+        <div class="slide1"><img src="/img/bg-1.jpg" alt=""></div>
+        <div class="slide2"><img src="/img/bg-2.jpg" alt=""></div>
+        <div class="slide3"><img src="/img/bg-3.jpg" alt=""></div>
+    </div>
     <div class="header-container">
         <header class="wrapper clearfix">
-            <img class="logo" src="/img/logo.png" alt="">
+            <a href="/"> <img class="logo" src="/img/logo.png" alt=""></a>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -33,17 +39,10 @@
     <div class="main-container">
         <div class="main wrapper clearfix">
             <div class="mother-slide">
-                <ul class="slide-nav">
-                    <li><a class="active" href="#">List 1</a></li>
-                    <li><a href="#">List 2</a></li>
-                    <li><a href="#">List 3</a></li>
-                </ul>
                 <div class="slide-title">
-                    <p class="heading">Sparadise</p>
-                    <p class="tagline">Beauty Spa and Massage</p>
                 </div>
-                <a href="./location.html" class="click-action">Find a spa near you</a>
             </div>
+            <a href="./location.html" class="click-action">Find a spa near you</a>
         </div>
         <!-- #main -->
     </div>
@@ -57,6 +56,8 @@
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

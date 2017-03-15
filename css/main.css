@@ -59,8 +59,7 @@ body {
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
 }
 
 .header-container {
@@ -155,33 +154,60 @@ nav a:hover {
 }
 
 html,
+body {
+    overflow: hidden;
+}
+
+html,
 body,
 .main-container {
     height: 100%;
 }
 
-.main-container {  
-    background: #000 url("../img/bg-1.jpg") no-repeat right top
-}
-
-ul.slide-nav {
+.bg-slide {
     position: absolute;
-    top: 40%;
-    right: 20px;
+    width: 100vw;
 }
 
-ul.slide-nav li {
+.slick-slide img {
+    margin-left: -10px;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.main-container .slide-bg {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+}
+
+ul.slick-dots {
+    top: 30%;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
     list-style: none;
 }
 
-.slide-nav a {
+ul.slick-dots li {
+    list-style: none;
+}
+
+ul.slick-dots button {
     color: transparent;
+    background: transparent;
     width: 15px;
     border-radius: 10px;
     display: block;
     height: 15px;
     margin-bottom: 10px;
     border: 2px solid #fff;
+    outline-color: transparent;
+}
+
+ul.slick-dots .slick-active button {
+    background: #fff;
 }
 
 .slide-nav a.active {
@@ -190,17 +216,26 @@ ul.slide-nav li {
 
 .mother-slide {
     text-align: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 40px;
 }
 
-.slide-title { 
+.slide-title {
     color: #fff;
     position: relative;
-    margin: 50px 0;
+    margin-bottom: 40px;
+    background: transparent url(/img/title-logo.png) no-repeat right top;
+    min-height: 50vh;
+    background-position: center center;
+    background-size: 30vw;
 }
 
 .slide-title .heading {
     font-family: italianno;
-    font-size: 180px;
+    font-size: 80px;
+    font-size: 13vw;
     line-height: 1em;
     margin: 0;
 }
@@ -220,13 +255,14 @@ ul.slide-nav li {
     padding: 10px;
     text-decoration: none;
     font-size: 20px;
+    position: relative;
 }
+
 
 /*Homepage specfic styles*/
 
-.home-page .main.wrapper {
-    padding-top: 200px;
-}
+.home-page {}
+
 
 /* ==========================================================================
    Media Queries
@@ -292,6 +328,9 @@ ul.slide-nav li {
         width: auto;
         /* 1140px - 10% for margins */
         margin: 0 auto;
+    }
+    .mother-slide {
+        bottom: 80px;
     }
 }
 
